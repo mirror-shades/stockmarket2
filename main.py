@@ -123,6 +123,7 @@ class StockMarketGame(QMainWindow):
         for i, stock in enumerate(self.stocks):
             name_item = QTableWidgetItem(stock.name)
             name_item.setForeground(QColor(stock.color))
+            name_item.setFont(QFont("Arial", 10, QFont.Bold))
             self.stock_table.setItem(i, 0, name_item)
             self.stock_table.setItem(i, 1, QTableWidgetItem(f"${stock.price:.2f}"))
 
